@@ -63,7 +63,7 @@ function section1slide1(){
     .append("g")
     .attr("transform", "translate(" + pieWidth / 2 + "," + pieHeight / 2 + ")");
     
-    d3.csv("d3_date_data.csv", function(d){
+    d3.csv("https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/d3_date_data.csv", function(d){
         return {created_at: d3.timeParse('%Y-%m-%d')(d.created_at), 
             num_tweets: d.num_tweets, 
             candidate: d.candidate,
@@ -652,7 +652,7 @@ function section1slide2(){
             var selection = document.getElementById("selecter").selectedIndex;
             var fillColor = "#69b3a2";
             if (thisRadio.checked == true){
-                d3.csv("d3_other_distribution_data.csv", 
+                d3.csv("https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/d3_other_distribution_data.csv", 
                 function(data){
                     if (thisRadio.value == 0){
                         x.domain(data.map(function(d){ return d.country;}))
@@ -774,7 +774,7 @@ function section2slide1(){
     .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("d3_trump_wordcloud_data.csv", function(data){
+    d3.csv("https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/d3_trump_wordcloud_data.csv", function(data){
         // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
         var layout = d3.layout.cloud()
         .size([width, height])
@@ -849,7 +849,7 @@ function section2slide1(){
     .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("d3_biden_wordcloud_data.csv", function(data){
+    d3.csv("https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/d3_biden_wordcloud_data.csv", function(data){
 
         // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
         var layout = d3.layout.cloud()
@@ -941,7 +941,7 @@ function section2slide2(){
         color: color
     };
 
-    d3.csv("d3_sentiment_data.csv", function(data_total){
+    d3.csv("https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/d3_sentiment_data.csv", function(data_total){
         var data = [[],[]];
         data_total.forEach(function(d){
             data[0].push({axis: d.sentiment, value: d.trump_sum});
@@ -1254,8 +1254,8 @@ function section3slide1(){
     var data = d3.map();
     
     d3.queue()
-        .defer(d3.json, "usa.geojson")
-        .defer(d3.csv, "d3_vote_tweet_data.csv", function(d) {data.set(d.state,
+        .defer(d3.json, "https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/usa.geojson")
+        .defer(d3.csv, "https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/d3_vote_tweet_data.csv", function(d) {data.set(d.state,
              [+d.trump_minus_biden, +d.sum_biden, +d.sum_trump,
                  +d.vote_trump_minus_biden, +d.vote_biden_total, +d.vote_trump_total]);})
         //.defer(d3.csv, "d3_vote_data.csv", function(d) {vote.set(d.state, [+d.trump_minus_biden, +d.sum_biden, +d.sum_trump]);})
@@ -1744,7 +1744,7 @@ function section3slide2(){
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-        d3.csv("d3_scatter_trump.csv", function(data) {
+        d3.csv("https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/d3_scatter_trump.csv", function(data) {
 
             // Add X axis
             var x = d3.scaleLinear()
@@ -1787,7 +1787,7 @@ function section3slide2(){
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-        d3.csv("d3_scatter_biden.csv", function(data) {
+        d3.csv("https://raw.githubusercontent.com/BrynnZY/learning/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/data/d3_scatter_biden.csv", function(data) {
 
             // Add X axis
             var x = d3.scaleLinear()

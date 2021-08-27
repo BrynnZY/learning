@@ -48,32 +48,32 @@ h1 {font-size: 450%}
 h2 {font-size: 350%}
 p {font-size: 150%}
 #test{
-    background-image:url('firstPageBg.jpg');
+    background-image:url('https://github.com/BrynnZY/learning/blob/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/picture/firstPageBg.jpg?raw=true');
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
 }
 
 #section2setting{
-	background-image:url('section2bg.jpg');
+	background-image:url('https://github.com/BrynnZY/learning/blob/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/picture/section2bg.jpg?raw=true');
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
 }
 #section3setting{
-	background-image:url('section3bg.jpg');
+	background-image:url('https://github.com/BrynnZY/learning/blob/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/picture/section3bg.jpg?raw=true');
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
 }
 #section4setting{
-	background-image:url('section4bg.jpg');
+	background-image:url('https://github.com/BrynnZY/learning/blob/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/picture/section4bg.jpg?raw=true');
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
 }
 #section5setting{
-	background-image:url('lastPageBg.jpg');
+	background-image:url('https://github.com/BrynnZY/learning/blob/master/fit5147_data_visualization/assignment/a5_main_visual_project/visual_project/picture/lastPageBg.jpg?raw=true');
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
