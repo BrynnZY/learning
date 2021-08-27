@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>test</title>
+      <script src="https://code.jquery.com/jquery.js"></script> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.css" integrity="sha512-B8Hj6bXSSDpuquNTToXDKCozSjPjyn+BQyBX5H2ivx1dd1aATFj8Gmu+IZjY/75yMnYA8YdVilrTZD5KKuvo+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullpage.extensions.min.js" integrity="sha512-Yp1Ok5+1WhsZCoc1TB0tOntGtcktIXRWriK3C/ooATvaWFpZoQarm70fDq6y1bt6aJ38hbFYGypKJ8v8iIM75A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/vendors/scrolloverflow.min.js" integrity="sha512-kR5v0zdimtzYLAfP/10CNymhBY9+vEorRekWkz4Pl78yDyF/0DxYGAFwMXXE4cyr53zTz2K6vLdhABMEhLCfzw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/vendors/scrolloverflow.js" integrity="sha512-T7QzsBMUI/AxPcrKV25pY0pcTng9va1TH+a935GiZ4wgFrayIoFjp3+t7H+ET28fyfKVr0kfpYKqJFowwFWHWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.min.js" integrity="sha512-+h9zqWzfR5vcwjVZzamD8wPFbJH79bvGtuVfVuYFuDezcS3VO9l0HHyW5Z3Z10q6xgkEYgWEsWQZ/yLFUuMzWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.js" integrity="sha512-+TP3hFfu/0WQv2twlu9oa/EPpPfO+0ofwM6iYSMRL5k+exF1rfaMxKEWEZn95UluAvU5SH+n5Hr5noxpD+2b4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+      <link rel = "stylesheet" type = "text/css" href = "test.css">
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $('#fullpage').fullpage({
+                scrollOverflow: true,
+                // afterSlideLoad: function(section, origin, destination, direction){
+                //     fullpage_api.scrollOverflowReset.setPrevious(section.item);
+                //     fullpage_api.scrollOverflowReset.reset();
+                // },
+                controlArrows: true,
+                slidesNavigation: true ,
+                sectionsColor: ['#725a7a', '#2d2d2b', '#43506c', '#2a484e', '#525b66'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                menu: '#menu',
+                lazyLoad: true,
+                // scrollOverflow: true,
+                scrollOverflowReset: true,
+                // scrollOverflowResetKey: 'REMOVED'
+            });
+            });
+        </script>
+        <ul id="menu">
+            <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Introduction</a></li>
+            <li data-menuanchor="secondPage"><a href="#secondPage">General Distribution</a></li>
+            <li data-menuanchor="3rdPage"><a href="#3rdPage">Word Inside Tweets</a></li>
+            <li data-menuanchor="4thpage"><a href="#4thpage">Tweets VS Votes</a></li>
+            <li data-menuanchor="lastPage"><a href="#lastPage">Conclusion</a></li>
+        </ul>
+        <div id = "fullpage">
+            <div class="section"  id = "test">
+                <div class="container-fiuled">
+                    <div class="row clearfix">
+                        <div class="col-md-12 column" id = "test2">
+                                <h1>
+                                    US 2020 ELECTION TWEETS ANALYSIS
+                                </h1>
+                                <h2>
+                                    Trump VS Biden
+                                </h2>
+                                <p>
+                                    2020 US Election happened on November 3rd, which is a very popular topic and has numerous related discussions across 
+                                    various social applications and websites. 
+                                </p>
+                                <p>During the election time, there are numerous tweets aboutpresident candidate.</p>
+                                <p>Therefore, it is worth exploring that the tweets of the two popular candidates, 
+                                    Trump and Biden, near the election time.</p>
+                                <p>&nbsp;</p>
+                                <h3>Do you want to know what is the distribution of the related tweets? what is words and sentiments indide tweets? and does the tweets affect votes?</h3>
+                                <h3>Let's scroll down and get started!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	        <div class="section" id = "section2setting">
+                <div class="slide" id="slide1">
+                    <div class="intro">
+                        <div class="container-fiuled">
+                            <div class="row clearfix">
+                                <div class="col-md-12 column">
+                                    <h2 class="text-center">
+                                        GENERAL DISTRIBUTION
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-6 column">
+                                    <h2>
+                                        Distribution by Date
+                                    </h2>
+                                    <p id = "lineGraph"></p>
+                                    <div id = "slider1">
+                                        <p ><div id="slider-range" style = "padding-left:30px;"></div></p>
+                                        <p class="value-range" style = "text-align: center"></p>
+                                      </div>
+                                    <p  style = "padding-left:30px; font-size : 90%">
+                                        Feel free to change the time period using the Range Slider above to view time varing distribution.
+                                    </p>
+                                    <p>The graph above illustrates the tweets distribution in terms of time. </p>
+                                    <p>
+                                        First, the tweets about these two people increased 
+                                        significantly and fluctuated between Nov 2and Nov 8, and number of tweets about Biden is lower than Trump’s before Nov 
+                                        7th.
+                                    </p>
+                                    <p>
+                                        Then, when time reached Nov 7th, Biden related tweets becomes more than Trump's.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 column">
+                                    <p  style = "padding-left:30px;">
+                                        The group of pie charts below show the distribution of number of tweets in general. 
+                                        Through the whole period, first, total number of tweets and the sum of 
+                                        retweet count about Trump is slightly more than that of Biden. However, the sum of likes of the tweets about Biden is more 
+                                        than Trump’s.
+                                    </p>
+                                    <div class="row clearfix">
+                                        <div class="row clearfix">
+                                        <div class="col-md-12 column">
+                                            <h3 class = "pieTitle" >Number of Tweets</h3>
+                                            <p style = "text-align: center" id = "pieGraph1"></p>
+                                        </div></div>
+                                        <div class="col-md-6 column">
+                                            <h3 class = "pieTitle">Number of Likes</h3>
+                                            <p style = "text-align: center" id = "pieGraph2"></p>
+                                        </div>
+                                        <div class="col-md-6 column">
+                                            <h3 class = "pieTitle">Number of Retweets</h3>
+                                            <p style = "text-align: center" id = "pieGraph3"></p>
+                                        </div>
+                                        <p class="value-range" style = "text-align: center"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="container-fiuled">
+                    <div class="row clearfix">
+                        <div class="col-md-12 column">
+                            <h2 class="text-center">
+                                Distribution in Other Aspects
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <p  style = "margin-right:100px; margin-left:100px;">
+                           The bar chart below shows other distribution.
+                        </p>
+                        <p  style = "margin-right:100px; margin-left:100px;">
+                            Want to know other aspects? changing the radio and selecter to view more.
+                        </p>
+                            <p style = "text-align: center">Choose an aspect to view the distribution</p>
+                            <div class="row clearfix" style = "margin-left:100px; font-size: 20px;">
+                                <form style = "text-align: center">
+                                    <input type="radio" name="aspect" class="aspect" value=0 checked="checked" /> Country&nbsp;
+                                    <input type="radio" name="aspect" class="aspect" value=1 />&nbsp;Source&nbsp;
+                                    <select id = "selecter" style = "color: black;">
+                                        <option value="total">Total Tweets Distribution</option>
+                                        <option value="trump">Trump's Related Tweets Distribution</option>
+                                        <option value="biden">Biden's Related Tweets Distribution</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <p style = "padding-left:30px; text-align: center" id = "barGraph"></p>
+                            <p style = "margin-right:100px; margin-left:100px;">The distributions for these two candidates are similar as shown above.</p>
+                            <p  style = "margin-right:100px; margin-left:100px;">
+                                In country aspect, the number of tweets about them 
+                                in US dominates in the whole records. In source aspect, the people that tweets about Biden use iPhone to tweets more, while tweets about Trump are more 
+                                frequently created from Web App.</p>
+                            </p>
+                    </div></div>
+                </div>
+            </div>
+	        <div class="section" id = "section3setting">
+                <div class="slide" id="slide3">
+                    <div class="container-fiuled">
+                    <div class="intro">
+                                <h1 class="text-center">Word & Sentiment Inside Tweets</h1>
+                                <p  style = "padding-left:50px;">
+                                    The two word clouds below shows the words that used in Trump’s related tweets and 
+                                    Biden’s related tweets respectively. Some words are popular in both clouds, such as president, electionday and result,
+                                    which shows what is mentioned frequently in election tweets.
+                                </p>
+                                <div class="col-md-6 column">
+                                <div class="row clearfix">
+                                        <p id = "trumpWordCloud"></p>
+                                        <p class="text-center">Frequent words inside Trump's related tweets</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 column">
+                                <div class="row clearfix">
+                                        <p id = "bidenWordCloud"></p>
+                                        <p class="text-center">Frequent words inside Biden's related tweets</p>
+                                </div>
+                            </div>
+                    </div></div>
+                </div>
+                <div class="slide" id="slide4">
+                    <div class="intro">
+                        <div class="container">
+                            <div class="row clearfix">
+                                <div class="col-md-12 column">
+                                    <h1 class="text-center">
+                                        Sentiment Analysis
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-8 column">
+                                    <p id = "legand"></p>
+                                    <p id = "RadarGraph"></p>
+                                </div>
+                                <div class="col-md-4 column">
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p  style = "padding-left:20px;">
+                                        Want to know about sentiment?
+                                        </p>
+                                    <p  style = "padding-left:20px;">
+                                        The radar chart at left demonstrates words count of different sentiment inside tweets.
+                                        </p>
+                                    <p  style = "padding-left:20px;">
+                                        Biden’s related tweets have more positive, anticipation and trust words.
+                                        </p>
+                                        <p  style = "padding-left:20px;">
+                                            For Trump, the positive and negative 
+                                            words count are similar, the fear words count is also very large, so some tweets about Trump may contains negative and fear 
+                                            emotion.
+                                        </p>
+                                        <div class="row clearfix" style = "margin-left:5px; font-size: 20px;">
+                                            <div class="col-md-6 column">
+                                                <p id = "LollipopGraph"></p>
+                                            </div>
+                                            <div class="col-md-6 column">
+                                                <p id = "LollipopGraph"></p>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	        <div class="section"  id = "section4setting">
+                <div class="slide" id="slide1">
+                    <div class="intro">
+                        <div class="container-fiuled">
+                            <div class="row clearfix">
+                                <div class="col-md-12 column">
+                                    <h1 class="text-center">
+                                        Tweets VS Votes in Each US State
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-6 column">
+                                    <p style = "text-align: center">Tweets distribution by State</p>
+                                    <p id = "tweetLegand"></p>
+                                    <p id = "tweetsMap"></p>
+                                </div>
+                                <div class="col-md-6 column">
+                                    <p style = "text-align: center">Votes distribution by State</p>
+                                    <p id = "voteLegand"></p>
+                                    <p id = "votesMap"></p>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-4 column">
+                                    <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+                                    <p  style = "padding-left:20px;">
+                                        In general, Trump seems to 
+                                        have more dicussions across all America. It is interesting to note that although tweets in some regions, such as Calfornia, are 
+                                        more about Trump.
+                                    </p>
+                                </div>
+                                <div class="col-md-4 column">
+                                    <div class="col-md-6 column">
+                                    <p id = "tweetsBar"></p></div>
+                                    <div class="col-md-6 column">
+                                    <p id = "votesBar"></p></div>
+                                    <p id = "msg">Click state on map to see details comparision</p>
+                                </div>
+                                <div class="col-md-4 column">
+                                    <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p  style = "padding-right:20px;">
+                                        But in fact, Biden has more votes in these states. Therefore, it is important to analysis the content in 
+                                        tweets to discover the reasons behind in Question 2.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="intro">
+                        <div class="container-fiuled">
+                            <div class="row clearfix">
+                                <div class="col-md-12 column">
+                                    <h1>
+                                        Correlation between tweets and votes
+                                    </h1>
+                                    <div class="row clearfix">
+                                        <div class="col-md-4 column">
+                                            <p  class="text-center">Guess: Does states with more votes has more tweets?</p>
+                                            <form class="text-center">
+                                            <button type="button" id = "yes" style = "color:black">Yes</button>
+                                            <button type="button" id = "no" style = "margin-left:20px; color:black">&nbsp;No&nbsp;</button></form>
+                                            <p id = "btnMsg"  class="text-center"></p>
+                                        </div>
+                                        <div class="col-md-4 column">
+                                            <p id = "pie"   class="text-center"></p>
+                                        </div>
+                                        <div class="col-md-4 column">
+                                            <p id = "guessResult"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-md-5 column">
+                                            <div class="row clearfix">
+                                                    <p id = "trumpScatter" class="text-center"></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 column">
+                                            <p  id = "scatterMsg1" ></p>
+                                        </div>
+                                        <div class="col-md-5 column">
+                                            <div class="row clearfix">
+                                                    <p id = "bidenScatter" class="text-center"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section"  id = "section5setting">
+            <div class="container-fiuled">
+                <div class="row clearfix">
+                    <div class="col-md-12 column" id = "test2">
+                            <p>
+                                In the previous pages, we have explored US 2020 election tweets in different aspect.
+                            </p>
+                            <p>In terms of its distribution, Trump is more popular in most of time in general or in terms of time and location, but Biden 
+                                related tweets has more likes. For the source, Trump is more popular on Web App, while a large number of peoples that 
+                                tweets on Biden are iPhone users.</p>
+                            <p>When it comes to the words and sentiment inside tweets, frequent words in the two candidates’ related tweets are similar, but 
+                                has some differences, which is interesting to discover, and Biden seems to have more positive related tweets than Trump.
+                                </p>
+                            <p>By comparing the real votes and tweets, Trump often has more tweets discussion than Biden in different states, but in some 
+                                states like California, although he is popular on Twitter, Biden has significant more votes than him. In addition, there is a correlation between tweets and votes. </p>
+                            <p>&nbsp;</p>
+                            <h1>
+                                Thank you for watching!
+                            </h1>
+                            <h5>
+                                Original Datasource:  
+                            </h5>
+                            <h5>
+                                1: US Election 2020 Tweets. Retrieve from https://www.kaggle.com/manchunhui/us-election-2020-tweets
+                            </h5>
+                            <h5>
+                                2: US Election 2020 Race to Presidential Election 2020. Retrieve from https://www.kaggle.com/unanimad/us-election2020?select=president_county_candidate.csv
+                            </h5>
+                    </div>
+                </div>
+            </div></div>
+        </div>    
+        <script src = "https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://unpkg.com/d3-simple-slider"></script>
+        <script type = "text/javascript" src = "myCharts.js"></script>
+    </body>
+</html>
