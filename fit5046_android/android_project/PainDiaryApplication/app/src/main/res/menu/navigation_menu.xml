@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_home_fragment"
+        android:title="Home Screen" />
+    <item
+        android:id="@+id/nav_data_entry_fragment"
+        android:title="Pain Data Entry" />
+    <item
+        android:id="@+id/nav_daily_records_fragment"
+        android:title="Pain Daily Records" />
+    <item
+        android:id="@+id/nav_report_fragment"
+        android:title="Reports" />
+    <item
+        android:id="@+id/nav_map_fragment"
+        android:title="Maps" />
+    </group>
+</menu>

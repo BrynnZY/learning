@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Start Date: " />
+        <EditText
+            android:id="@+id/start_entering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Click to choose the start date"
+            android:inputType="none"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text=" End Date:  " />
+        <EditText
+            android:id="@+id/end_entering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Click to choose the end date"
+            android:inputType="none"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/dateConfirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="Generate Report"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <com.github.mikephil.charting.charts.CombinedChart xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/chart"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        tools:context="com.sis.pcust.activity.ManagerChartActivity"/>
+
+    <Button
+        android:id="@+id/correlationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:text="Correlation Test"
+        android:visibility="invisible" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/correlationMessage"/>
+</LinearLayout>

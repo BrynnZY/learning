@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Week3Activity</string>
+    <string name="enterName">Please Enter Your Name</string>
+    <string name="enterSurname">Please Enter Your Surname</string>
+    <string name="enterAge">Please Enter Your Age</string>
+</resources>
